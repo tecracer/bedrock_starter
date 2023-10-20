@@ -1,0 +1,26 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  ARTEFACT: dist/claude
+
+tasks:
+  init:
+    desc: install dependencies, build binary
+    sources:
+      - main/main.go
+      - bedrockruntime.go
+      - call_claude.go
+    generates:
+      - dist/claude
+    cmds:
+      - go build -o dist/claude main/main.go
+
+  run:
+    desc: run the app
+    deps:
+      - init
+    cmds:
+      - dist/claude
+    silent: true

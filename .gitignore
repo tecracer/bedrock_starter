@@ -2,3 +2,5 @@ js-bedrock/node_modules
 .task
 .venv
 python-bedrock/current_requirements.txt
+go-bedrock/dist
+js-bedrock/package-lock.json

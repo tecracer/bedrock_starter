@@ -1,0 +1,14 @@
+{
+  "name": "js-bedrock",
+  "version": "1.0.0",
+  "description": "Example of using the AWS SDK for JavaScript v3 with Bedrock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "G.Glawe",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.428.0"
+  }
+}

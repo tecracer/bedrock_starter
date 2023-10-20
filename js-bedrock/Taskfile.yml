@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  init:
+    desc: install dependencies
+    sources:
+      - package.json
+    generates:
+      - node_modules/.package-lock.json
+    cmds:
+      - npm i
+    silent: true
+
+  run:
+    desc: run the app
+    deps:
+      - init
+    cmds:
+      - node index.js
+    silent: true
