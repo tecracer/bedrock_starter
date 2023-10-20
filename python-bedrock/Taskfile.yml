@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  PIP: pip3
+
+tasks:
+  init:
+    desc: install dependencies
+    sources:
+      - requirements.txt
+    generates:
+      - current_requirements.txt
+    cmds:
+      - python3 -m venv .venv
+      - source .venv/bin/activate && pip install --upgrade pip
+      - source .venv/bin/activate && {{.PIP}} install -r requirements.txt
+      - source .venv/bin/activate && pip freeze >current_requirements.txt
+    silent: true
+
+
+  run:
+    desc: install dependencies
+    deps:
+      - init
+    cmds:
+      - source .venv/bin/activate && python app.py
+    silent: true

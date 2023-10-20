@@ -1,0 +1,4 @@
+js-bedrock/node_modules
+.task
+.venv
+python-bedrock/current_requirements.txt
