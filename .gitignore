@@ -4,3 +4,4 @@ js-bedrock/node_modules
 python-bedrock/current_requirements.txt
 go-bedrock/dist
 js-bedrock/package-lock.json
+.vscode
